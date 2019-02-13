@@ -1,0 +1,268 @@
+/* My WEB120 Portal Website Styles */
+
+html {
+    background-color:#222;
+}
+
+div.wrapper {
+    background-color:#fff;
+    overflow:auto;
+}
+
+h1>a {
+    text-decoration: none;
+    color:#000;
+}
+
+#intro {
+    line-height: 150%;
+    font-size: 1.5em;
+}
+
+aside.contact {
+    margin-top: 20px;
+    border-left: 1px solid black;
+}
+
+aside.contact h2 {
+    margin-left: 20px;
+}
+
+
+.logo {
+    color:#ff9900;
+    margin-left:1%;
+    text-shadow:1px 1px #ddd;
+    font-size:1.25em;
+}
+
+.logo:hover {
+    text-shadow: 1px 1px #777;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+}
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+	clear:both;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+
+   div.wrapper {
+		width:80%;
+		margin:auto;
+	}
+
+    section {
+		width:65%;
+		float:left;
+	}
+
+     aside {
+		width:34%;
+		float:right;
+	}
+
+
+    img.desktop {
+      		float:left;
+       		width:50%;
+            padding-right: 15px;
+            padding-left: 15px;
+   	 }
+
+    img.tablet, img.phone {
+       		 display:none;
+    	}
+
+    .pageID {
+        /*margin-left: 50%;*/
+        margin-left: 55%;
+        font-size: 2.5em;
+    }
+
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        		background-color: #ff9900;
+        		color:#000;
+   	 }
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+
+	section {
+		width:60%;
+		float:left;
+	}
+
+aside {
+		width:39%;
+		float:right;
+	}
+
+            img.tablet {
+       		width:100%;
+           }
+
+           img.phone, img.desktop {
+        		display:none;
+           }
+
+    /* Change background color of navigation on selected page */
+           ul.topnav li a.selected {
+        		background-color: #ccc;
+        		color:#000;
+          }
+  }
+
+
+/* PHONE */
+@media all and (max-width:736px) {
+
+    img.phone {
+       		width:100%;
+    }
+
+    img.tablet, img.desktop {
+        		display:none;
+    }
+
+}
+
+@charset "utf-8";
+/* CSS Document */
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #ff9900;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+   }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+
+@media screen and (max-width:680px) {
+
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+
+}
+
+
+
+/* start reCAPTCHA styles */
+
+       form>div {
+            margin:1em;
+        }
+
+       /* writes to small text above reCAPTCHA upon failure */
+
+        .dateFeedback{
+			font-style:italic;
+			font-size:70%;
+			font-weight:bold;
+			color:#f00;
+		}
+
+        input:required {
+              border: 1px solid red;
+        }
+
+         input:optional, textarea:optional {
+             background-color:#f1f1f1;
+             border:1px solid #ccc;
+        }
+
+        input[type="submit"], input[type="button"] {
+          background-color: #fff;
+          border-radius: 4px;
+          border: solid 1px #ccc;
+          padding: 0.3em 0.5em;
+        }
+
+        fieldset {
+          border: 1px solid #ccc;
+          max-width: 350px;
+        }
+
+        legend {
+          margin-left: 0.5em;
+          padding: 0.2em 0.5em;
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+        }
+
+        /* end reCAPTCHA styles */
+
+img.shrug {
+    margin-left: 45%;
+    height: 50%;
+    width: 50%;
+}
